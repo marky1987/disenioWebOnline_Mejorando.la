@@ -119,12 +119,23 @@ header #avatar img
 	border-radius: 50%;
 	width: 55px;
 }
-header #logo img
+header #logo 
 {
 	border-right: 1px solid white;
-	margin-right: -1.5em;
+	margin-right: 0.5em;
+}
+
+header #logo img
+{
+	
+	margin-right: 0.5em;
 	padding-right: 0.5em;
 	width: 52px;
+	-webkit-transition: 1s;
+}
+header #logo img:hover
+{
+	-webkit-transform: rotate(360deg);
 }
 nav
 {
@@ -151,9 +162,19 @@ nav ul #publicar_nav a
 	border-radius: 5px;
 	box-shadow:rgba(0, 0, 0, 0.5) 5px 5px 15px;
 	font-style: italic;
-	padding: 0.8em 0.5em;
+	padding: 0.8em 0.5em 0.8em 2.5em;
 	text-decoration: none;
 	text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
+}
+nav ul #publicar_nav a:before
+{
+	left: .5em;
+	position:absolute;
+	top: .9em;
+}
+nav ul #publicar_nav a:hover:before
+{
+	font-size: 17px;
 }
 nav ul li
 {
@@ -164,7 +185,17 @@ nav ul li a
 {
 	color: white;
 	display: block;
-	padding: 0.5em 0;
+	padding: 0.5em;
+	text-decoration: none;
+	-webkit-transition: 0.3s;
+}
+nav ul li a:hover
+{
+	background: #343B54;
+}
+aside
+{
+	display: none;
 }
 
 #contenido
@@ -259,5 +290,22 @@ nav ul li a
 	#contenido .item:nth-child(odd)
 	{
 		margin-right: 2%;
+	}
+}
+
+@media screen and (min-width: 1000px)
+{
+	aside
+	{
+		display: block;
+		float:right;
+		margin: 1em;
+		width: 20%;
+
+	}
+	aside video
+	{
+		margin-top: -1.2em;
+		width: 100%;
 	}
 }
